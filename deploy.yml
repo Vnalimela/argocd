@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   labels:
     app: train
-  name: movies-deploy
+  name: train-deploy
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: train
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: siraj321/paytmtrain:latest
+        image: vani12346/trainrepo:latest
         ports:
           - containerPort: 80
 ---
